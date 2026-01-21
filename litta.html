@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #1f2937;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 80px 40px;
+            text-align: center;
+            background: linear-gradient(to right, #38bdf8, #0ea5e9);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Cards */
+        .container {
+            padding: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #0ea5e9;
+        }
+
+        /* Form */
+        .contact {
+            background: white;
+            padding: 40px;
+            margin: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact button {
+            background-color: #0ea5e9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #0284c7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f2937;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>DevOpsApp</h2>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Jenkins + Docker CI/CD Pipeline</h1>
+        <p>Automated build and deployment of a web application</p>
+    </section>
+
+    <!-- Cards -->
+    <section class="container">
+        <div class="cards">
+            <div class="card">
+                <h3>GitHub</h3>
+                <p>Stores the source code and Dockerfile for the project.</p>
+            </div>
+            <div class="card">
+                <h3>Jenkins</h3>
+                <p>Automates build, test, and deployment process.</p>
+            </div>
+            <div class="card">
+                <h3>Docker</h3>
+                <p>Packages the application into a container.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button onclick="showMessage()">Submit</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DevOps Mini Project | Jenkins & Docker</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Thank you! Your message has been submitted 🚀");
+        }
+    </script>
+
+</body>
+</html>
